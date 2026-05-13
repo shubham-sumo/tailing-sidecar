@@ -3,6 +3,7 @@ FROM public.ecr.aws/sumologic/sumologic-otel-collector:0.149.0-sumo-0 AS collect
 FROM alpine:3.23.3
 
 RUN apk update && apk upgrade --no-cache
+# test comment for changelog verification
 
 RUN mkdir -p /etc/otel /var/lib/otc /var/log
 
