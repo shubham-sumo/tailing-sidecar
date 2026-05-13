@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.99.5] - 2026-05-13
+
+- chore: test change for changelog verification [#4]
+
+[#4]: https://github.com/shubham-sumo/tailing-sidecar/pull/4
+
 ## [v0.20.3] - 2026-04-09
 - chore: bump tailing-sidecar-operator to 0.20.3 (#861)
 - chore: bump sumologic-otel-collector to 0.149.0 (#861)
