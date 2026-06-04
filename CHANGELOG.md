@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v20.26.8] - 2026-06-04
+
+## What's Changed
+* feat: prepare release v20.26.7 by @github-actions[bot] in https://github.com/shubham-sumo/tailing-sidecar/pull/7
+
+## New Contributors
+* @github-actions[bot] made their first contribution in https://github.com/shubham-sumo/tailing-sidecar/pull/7
+
+**Full Changelog**: https://github.com/shubham-sumo/tailing-sidecar/compare/v100.0.0...v20.26.8
+
 ## [v20.26.7] - 2026-06-04
 
 - No notable changes
