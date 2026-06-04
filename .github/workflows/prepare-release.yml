@@ -56,8 +56,9 @@ jobs:
           configurationJson: |
             {
               "ignore_labels": ["release"],
-              "template": "#{{UNCATEGORIZED}}",
-              "pr_template": "- #{{TITLE}} [#{{NUMBER}}]\n",
+              "template": "#{{UNCATEGORIZED}}\n#{{UNCATEGORIZED_REFS}}",
+              "pr_template": "- #{{TITLE}} [##{{NUMBER}}]\n",
+              "pr_reference_template": "[##{{NUMBER}}]: #{{URL}}\n",
               "empty_template": "- No notable changes\n"
             }
         env:
@@ -79,7 +80,6 @@ jobs:
           # Build changelog entry
           {
             echo "## [v${VERSION}] - ${TODAY}"
-            echo ""
             echo ""
             echo '${{ steps.changelog.outputs.changelog }}'
           } > /tmp/changelog-entry.md
