@@ -56,9 +56,8 @@ jobs:
           configurationJson: |
             {
               "ignore_labels": ["release"],
-              "template": "#{{UNCATEGORIZED}}\n#{{UNCATEGORIZED_REFS}}",
-              "pr_template": "- #{{TITLE}} [##{{NUMBER}}]\n",
-              "pr_reference_template": "[##{{NUMBER}}]: #{{URL}}\n",
+              "template": "#{{UNCATEGORIZED}}",
+              "pr_template": "- #{{TITLE}} ([##{{NUMBER}}](#{{URL}}))\n",
               "empty_template": "- No notable changes\n"
             }
         env:
