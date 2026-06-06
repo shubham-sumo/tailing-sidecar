@@ -66,10 +66,16 @@ jobs:
       - name: Create release branch, update Chart.yaml and CHANGELOG
         env:
           GH_TOKEN: ${{ github.token }}
+          CHANGELOG_BODY: ${{ steps.changelog.outputs.changelog }}
         run: |
           VERSION="${{ inputs.version }}"
           BRANCH="prepare-release-${VERSION}"
           TODAY=$(date +%Y-%m-%d)
+
+          if git ls-remote --heads origin "${BRANCH}" | grep -q .; then
+            echo "::error::Branch ${BRANCH} already exists on remote"
+            exit 1
+          fi
 
           git checkout -b "${BRANCH}"
 
@@ -80,7 +86,7 @@ jobs:
           {
             echo "## [v${VERSION}] - ${TODAY}"
             echo ""
-            echo '${{ steps.changelog.outputs.changelog }}'
+            printf '%s\n' "${CHANGELOG_BODY}"
           } > /tmp/changelog-entry.md
 
 
